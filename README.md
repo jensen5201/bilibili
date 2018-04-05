@@ -4,14 +4,16 @@
 
 ## Server
 
-- 后台接口serve by@上铺乐神，基于go语言开发，喜欢或者想了解的尽情去star蹂躏吧！
+- 后台接口`serve by`@上铺乐神，基于`go`语言开发，喜欢或者想了解的尽情去`star`蹂躏吧！
 - Link:https://github.com/627886474/aibibi
 
-## Description
+## Description and Environment
 
 - 基于vue-cli脚手架构建
-- 采用vue2.0 + axios + vuex + vue-router全家桶开发
-- 选用element-ui组件
+- 采用`vue2.0 + axios + vuex + vue-router`全家桶开发
+- 选用`element-ui`组件
+- 开发工具:`Sublime Text 3`
+- node版本@8.9.3   webpack版本@3.6.0    yarn版本@0.24.5
 
 ## Build Setup
 
@@ -52,5 +54,11 @@
 - ./src/utils/ - 抽象工具
 - ./src/api/ - API请求
 - ./src/components/ - 自定义公共组件
+- ./docker-compose.yml -用于ubuntu部署到阿里云，可忽略
+
+## PS
+- 项目中尝试了nuxt，因nuxt是基于node8.0+的，所以确保node版本
+- 目录中demo文件夹可自行删除，这些只是平时的小demo
+
 
  ——人生实苦，但请足够相信大前端！If u like, just to give me a star~~

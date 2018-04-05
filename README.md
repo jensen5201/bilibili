@@ -6,9 +6,9 @@
 
 ## Description
 
-> 基于vue-cli脚手架构建
-> 采用vue2.0 + axios + vuex + vue-router全家桶开发
-> 选用element-ui组件
+- 基于vue-cli脚手架构建
+- 采用vue2.0 + axios + vuex + vue-router全家桶开发
+- 选用element-ui组件
 
 ## Build Setup
 
@@ -53,4 +53,4 @@
 - ./src/api/ - API请求
 - ./src/components/ - 自定义公共组件
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+ ——人生实苦，但请足够相信大前端！If u like, just to give me a star~~

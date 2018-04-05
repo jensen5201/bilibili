@@ -2,7 +2,7 @@
 * @Author: jensen
 * @Date:   2018-03-30 11:26:00
 * @Last Modified by:   jensen
-* @Last Modified time: 2018-04-05 15:43:17
+* @Last Modified time: 2018-04-05 20:50:05
 */
 
 import axios from 'axios'
@@ -21,5 +21,16 @@ export default {
     // pass_word: '123456',               // [string]  密码
 	}){
 		return axios.post( '/user/login', args)
-	}
+	},
+  editInfo( args = {
+    // "sex":1,                           // [string]  用户名
+  }){
+    return axios.post( '/user/update/sex', args)
+  },
+  changePsw( args = {
+    // pass: '12345678',                 // [string]  旧密码
+    // new_pwd: '123456',                // [string]  新密码
+  }){
+    return axios.post( '/user/password/update', args)
+  }
 }

@@ -1,0 +1,72 @@
+/*
+* @Author: jensen
+* @Date:   2018-04-06 01:56:10
+* @Last Modified by:   jensen
+* @Last Modified time: 2018-04-06 01:56:29
+*/
+
+  ._form-wrapper {
+    width: 480px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 0 1px rgba(0,0,0,.3);
+    background-color: #FFF;
+    padding:  30px 48px;
+    margin: auto 0;
+    text-align: center;
+    ._form-header{
+      label {
+        font-weight: 500;
+        &::after {
+          width: 100%;
+          content: '';
+          height: 2px;
+          display: inline-block;
+          border-radius: 100%;
+          background-color: #2AABFC;
+        }
+      }
+    }
+    ._form-body{
+      padding: 15px 0;
+      ._input-item{
+        display: flex;
+        height: 40px;
+        line-height: 40px;
+        margin: 20px 0;
+        label {
+          font-size: 14px;
+          color: #666;
+          width: 60px;
+          text-align: right;
+        }
+        .el-input{
+          flex: 1;
+          margin-left: 8px;
+        }
+        img {
+          margin-left: 20px;
+          width: 60px;
+        }
+      }
+    }
+    ._form-btn{
+      .el-button{
+        width: 100%;
+      }
+    }
+    ._form-forget{
+      margin: 20px 0;
+      font-size: 14px;
+      color: #999;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      span{
+        &:hover {
+          text-decoration: underline;
+          color: #2AABFC;
+        }
+      }
+
+    }
+  }

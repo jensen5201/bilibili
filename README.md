@@ -2,7 +2,10 @@
 
 > bilibili基于轻量级MVVM框架Vue进行开发，目的在于积累迭代构建一个完整的vue生态架构，---that is，不断完善抽调优化
 
-> 后台服务基于go语言，由@上铺乐神负责开发，想要学习了解的去star吧---https://github.com/627886474/aibibi
+## Server
+
+- 后台接口serve by@上铺乐神，基于go语言开发，喜欢或者想了解的尽情去star蹂躏吧！
+- Link:https://github.com/627886474/aibibi
 
 ## Description
 
@@ -26,9 +29,6 @@
 - yarn build 或者 npm run build
 
 ```
-
-## Server
--
 
 ## Structure
 

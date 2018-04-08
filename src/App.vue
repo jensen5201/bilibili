@@ -4,7 +4,7 @@
       <div class="app-logo">Logo</div>
       <nav class="app-nav _flex-item">
         <ul class="_flex">
-          <li class="active"><router-link to='/overview'>首页</router-link></li>
+          <li><router-link to='/overview'>首页</router-link></li>
           <li><router-link to='/overview'>社区</router-link></li>
           <li><router-link to='/overview'>合作</router-link></li>
           <li><router-link to='/overview'>关于我们</router-link></li>
@@ -43,8 +43,21 @@ export default {
       margin-left: 60px;
       li{
         position: relative;
+        z-index: 1;
         a{
-          padding: 0 20px;
+          padding: 0 30px;
+        }
+        &:before{
+          position: absolute;
+          transform: skewX(-30deg)  scaleY(0);
+          transition: 0.3s;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          content: '';
+          z-index: -1;
+          background-color: #fff;
         }
         &:after {
           position: absolute;
@@ -55,14 +68,19 @@ export default {
           display: inline-block;
           background-color: #fff;
           width: 0;
+          z-index: 1;
+          transform: translateX(-23px);
         }
         &:hover {
-          background-color: rgba(0,0,0,0.3);
           color: #fff;
+          &:before{
+            background-color: rgba(0,0,0,0.3);
+            transform: skewX(-30deg) scaleY(1);
+          }
           &:after {
             width: 100%;
             left: 0;
-            transition: all 0.5s linear;
+            transition: all 0.3s linear;
           }
         }
         &:hover ~ li::after{

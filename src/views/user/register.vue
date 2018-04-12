@@ -65,6 +65,11 @@
         // ok
         this.$router.push('/login')
       }
+    },
+    mounted() {
+      console.log(this.$api);
+      
+
     }
   }
 </script>

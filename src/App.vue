@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import View  from './components/View'
 export default {
   name: 'App'
 }

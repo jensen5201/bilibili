@@ -5,7 +5,7 @@ const routes = [
     name:"overview",
     component: (resolve) =>{
         require.ensure([], ()=> {
-            resolve(require('@/pages/overview'))
+            resolve(require('@/views/overview'))
         })
     }
   },
@@ -16,7 +16,7 @@ const routes = [
     name:"register",
     component: (resolve) =>{
         require.ensure([], ()=> {
-            resolve(require('@/pages/user/register'))
+            resolve(require('@/views/user/register'))
         })
     }
   },
@@ -25,7 +25,7 @@ const routes = [
     name:"login",
     component: (resolve) =>{
         require.ensure([], ()=> {
-            resolve(require('@/pages/user/login'))
+            resolve(require('@/views/user/login'))
         })
     }
   },
@@ -34,7 +34,7 @@ const routes = [
     name:"forgetPsw",
     component: (resolve) =>{
         require.ensure([], ()=> {
-            resolve(require('@/pages/user/forgetPsw'))
+            resolve(require('@/views/user/forgetPsw'))
         })
     }
   },

@@ -9,23 +9,13 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-        // '/api/rendering/user': {
-        //     target: 'http://task.renderbus.com',
-        //     // target: 'http://172.16.4.7:8980',
-        //     changeOrigin: true,
-        // }
-    },
-
     // Various Dev Server settings
-    host: '0.0.0.0', // can be overwritten by process.env.HOST
+    host: 'localhost', // can be overwritten by process.env.HOST  node运行时监听的域名
     port: 8989, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
-
     /**
      * Source Maps
      */
@@ -37,7 +27,13 @@ module.exports = {
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
-
+    // 开启本地代理
+    proxyTable: {
+      '/api/v1': {
+          target: 'http://127.0.0.1:8000',
+          changeOrigin: true,
+      }
+    },
     cssSourceMap: true
   },
 

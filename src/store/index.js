@@ -13,11 +13,10 @@ import * as mutations from "./mutation"
 vue.use(vuex)
 
 const store = new vuex.Store({
-	state,
-	mutations
+	'state': state,
+	'mutations': mutations
 })
 
 
 export default store
 
- 

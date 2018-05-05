@@ -6,8 +6,8 @@
 */
 
 
-const user = "testname"
-const msg = "test信息"
+const user = ""
+const msg = ""
 
 export default {
 	user,

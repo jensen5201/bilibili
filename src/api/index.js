@@ -9,15 +9,13 @@ import './config'
 import user from './user'
 import cat from './cat'
 import theme from './theme'
-import test from './test'
 
 export default {
 	install(Vue) {
 		Vue.prototype.$api = {
 			user,
-      cat,
-      theme,
-			test
+      		cat,
+      		theme,
 		}
 	}
 }

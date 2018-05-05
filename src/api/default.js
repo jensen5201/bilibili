@@ -6,13 +6,6 @@
 */
 
 // request with common  params
-export  const CONST_HEADER = () => ({
-	// token: '1212121212',
-	// sessionId: '55455sdf'
-	// userKey: localStorage.getItem('userKey') || 'c12b0333955ccca723d526d9e03e2dd8',
-  //  version: '1.0.0',
-  //  signature: 'rayvision2017',
-  //  platform: localStorage.getItem('platform') || 2,
-  //  channel: 2,
-  //  languageFlag: localStorage.getItem('languageFlag') || 0,
+export  const COMMON_HEADER = () => ({
+  'Content-Type' : 'application/json;charset=UTF-8',
 })

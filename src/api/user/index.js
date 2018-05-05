@@ -17,10 +17,15 @@ export default {
 		return axios.post( '/user/register', args)
 	},
 	login( args = {
-		// sigin_input: '科',                 // [string]  用户名
-    // pass_word: '123456',               // [string]  密码
+		// sigin_input: '123456@qq.com',                 // [string]  用户名
+    // password: '123456',               // [string]  密码
 	}){
 		return axios.post( '/user/login', args)
+  },
+  userInfo( args = {
+
+	}){
+		return axios.get( '/user/info', args)
 	},
   editInfo( args = {
     // "sex":1,                           // [string]  用户名

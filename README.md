@@ -46,7 +46,6 @@
 - ./src/assets/images - 全局的图片资源
 - ./src/main.js - 应用入口
 - ./src/App.vue - 根组件
-- ./src/shims.d.ts - typescript配置
 - ./src/views/ - 视图
 - ./src/router/ - 路由
 - ./src/vendors/ - 依赖库入口
@@ -55,10 +54,6 @@
 - ./src/api/ - API请求
 - ./src/components/ - 自定义公共组件
 - ./docker-compose.yml -用于ubuntu部署到阿里云，可忽略
-
-## PS
-- 项目中尝试了nuxt，因nuxt是基于node8.0+的，所以确保node版本
-- 目录中demo文件夹可自行删除，这些只是平时的小demo
 
 
  ——人生实苦，但请足够相信大前端！If u like, just to give me a star~~~

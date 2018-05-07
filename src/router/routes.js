@@ -18,6 +18,11 @@ const routes = [
         require.ensure([], ()=> {
             resolve(require('@/views/user/register'))
         })
+    },
+    meta: {
+        hideSliderTab: true,
+        hideMainHeader: true,
+        hideMainFooter: true
     }
   },
   {
@@ -27,6 +32,11 @@ const routes = [
         require.ensure([], ()=> {
             resolve(require('@/views/user/login'))
         })
+    },
+    meta: {
+        hideSliderTab: true,
+        hideMainHeader: true,
+        hideMainFooter: true
     }
   },
   {
@@ -36,6 +46,11 @@ const routes = [
         require.ensure([], ()=> {
             resolve(require('@/views/user/forgetPsw'))
         })
+    },
+    meta: {
+        hideSliderTab: true,
+        hideMainHeader: true,
+        hideMainFooter: true
     }
   },
 

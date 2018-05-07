@@ -46,14 +46,19 @@ import {
   Loading,
   Switch,
   Carousel,
-  CarouselItem
+  CarouselItem,
+  MenuItemGroup,
+  Menu,
+  MenuItem,
+  Submenu,
 } from 'element-ui';
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
 
 Vue.components(Row, Col, Input, Button, Form, FormItem, Checkbox, Radio, RadioGroup,
   Select, Option, Tree, Dialog, Progress, Tag, Pagination, Dropdown, DropdownMenu, DropdownItem,
   Tabs, TabPane, Breadcrumb, BreadcrumbItem, Card, Popover, DatePicker, Upload,
-  Table, TableColumn, Scrollbar, Cascader, Switch, Carousel, CarouselItem, CollapseTransition);
+  Table, TableColumn, Scrollbar, Cascader, Switch, Carousel, CarouselItem, CollapseTransition, MenuItemGroup, Menu,
+  MenuItem, Submenu,);
 
 
 Vue.prototype.$message = Message;

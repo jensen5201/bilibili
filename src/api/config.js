@@ -6,7 +6,7 @@
 */
 
 import axios from 'axios'
-import Promise from 'es6-promise'
+// import Promise from 'es6-promise'
 import { COMMON_HEADER }  from './default'
 
 console.log('当前环境:',process.env.NODE_ENV);

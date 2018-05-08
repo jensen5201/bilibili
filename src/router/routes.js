@@ -10,6 +10,43 @@ const routes = [
     }
   },
 
+  {
+    path: '/test1',
+    name: 'test1',
+    component: (resolve) =>{
+        require.ensure([], () => {
+            resolve(require('@/views/order/test1'))
+        })
+    }
+  },
+  {
+    path: '/test2',
+    name: 'test2',
+    component: (resolve) =>{
+        require.ensure([], () => {
+            resolve(require('@/views/order/test2'))
+        })
+    }
+  },
+  {
+    path: '/test3',
+    name: 'test3',
+    component: (resolve) =>{
+        require.ensure([], () => {
+            resolve(require('@/views/order/test3'))
+        })
+    }
+  },
+  {
+    path: '/test4',
+    name: 'test4',
+    component: (resolve) =>{
+        require.ensure([], () => {
+            resolve(require('@/views/order/test4'))
+        })
+    }
+  },
+
   // 登录注册模块
   {
     path:"/register",

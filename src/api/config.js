@@ -9,8 +9,6 @@ import axios from 'axios'
 // import Promise from 'es6-promise'
 import { COMMON_HEADER }  from './default'
 
-console.log('当前环境:',process.env.NODE_ENV);
-
 /* 配置http默认参数 config defaults */
 const isPro = process.env.NODE_ENV == 'production'
 const domain = {

@@ -23,11 +23,11 @@
             </el-dropdown-menu>
           </el-dropdown>
         </header>
-        <transition :name="transitionName">
+        <!-- <transition :name="transitionName"> -->
           <keep-alive>
-            <router-view class="_flex-item app-content" />
+            <router-view class="_flex-item app-content" transition='fade'  />
           </keep-alive>
-        </transition>
+        <!-- </transition> -->
         <footer class="app-footer _center" v-show='!$route.meta.hideMainFooter'>版权所有</footer>
       </el-col>
     </el-row>
@@ -117,15 +117,4 @@ export default {
     }
   }
 }
-
-// .slide-left-enter, .slide-right-leave-active { 
-// 　　opacity: 0; 
-// 　　-webkit-transform: translate(30px, 0); 
-// 　　transform: translate(30px, 0); 
-// } 
-// .slide-left-leave-active, .slide-right-enter { 
-// 　　opacity: 0; 
-// 　　-webkit-transform: translate(-30px, 0); 
-// 　　transform: translate(-30px, 0); 
-// }
 </style>

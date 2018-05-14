@@ -8,12 +8,12 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev --report",
     "build": "node build/build.js",
-    "nuxt": "nuxt"
+    "build:js": "cross-env ctarget=all webpack",
+    "biuld:js+css": "cross-env ctarget=js webpack"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "es6-promise": "^4.2.4",
-    "nuxt": "^1.4.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "2.3.1"
@@ -30,6 +30,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.1.5",
     "css-loader": "^0.28.0",
     "echarts": "3.7.0",
     "element-ui": "^2.3.2",

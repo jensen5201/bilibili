@@ -6,6 +6,7 @@ import axios from 'axios'
 import router from './router'
 import store from './store'
 import api from './api'
+import conf from './conf'
 import './plugins'
 import './utils'
 import './directive'
@@ -22,6 +23,7 @@ Vue.$e = Vue.prototype.$e = new Vue()
 
 /* 全局注册 */
 Vue.use(api)
+Vue.use(conf)
 
 /* eslint-disable no-new */
 let $VM = new Vue({

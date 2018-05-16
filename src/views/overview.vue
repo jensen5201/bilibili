@@ -48,11 +48,12 @@ export default {
             smooth: true
         }]
     }
-
     // 使用刚指定的配置项和数据显示图表。
     this.$nextTick(()=>{
+      console.log('qwqwqw12123132')
         myChart.setOption(option)
     })
+    console.log('12123132')
   }
 }
 </script>

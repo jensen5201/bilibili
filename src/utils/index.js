@@ -10,9 +10,15 @@
 
 import Vue from 'vue'
 import global from  './global'
+import Cookie from  './Cookie'
 
 Vue.use(new global())
+window.Cookie = Cookie
 
 export default {
-
+    install(vue){
+        vue.$utils = vue.prototype.$utils = {
+            Cookie
+        }
+    }
 }

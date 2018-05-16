@@ -7,8 +7,8 @@ import router from './router'
 import store from './store'
 import api from './api'
 import conf from './conf'
+import utils from './utils'
 import './plugins'
-import './utils'
 import './directive'
 import './filter'
 import './venders'
@@ -24,6 +24,7 @@ Vue.$e = Vue.prototype.$e = new Vue()
 /* 全局注册 */
 Vue.use(api)
 Vue.use(conf)
+Vue.use(utils)
 
 /* eslint-disable no-new */
 let $VM = new Vue({

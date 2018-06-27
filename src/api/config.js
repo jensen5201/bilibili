@@ -41,7 +41,30 @@ axios
 	.response
 	.use( response => {
     let res = response.data
-    return res
+    return Promise.resolve(res)
 	}, error => {
+		let errResult = {}
+
+        // 网络问题
+        if (error && ~error.message.indexOf("Network Error")) {  // 没有网络 离线
+          errResult.code = -1
+          errResult.message = i18n.t("axios_error_network_error")
+          return Promise.resolve(errResult)
+        }
+
+        // 终止请求 请求超时
+        if (error && error.code == "ECONNABORTED") {
+          if (~error.message.indexOf("timeout")) {
+            errResult.code = -2
+            errResult.message = i18n.t("axios_error_timeout")
+            return Promise.resolve(errResult)
+          }
+          // 其他原因
+          else {
+            errResult.code = -3
+            errResult.message = i18n.t("axios_error_unknow")
+            return Promise.resolve(errResult)
+          }
+        }
 		return Promise.inject(error)
 	})

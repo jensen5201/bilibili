@@ -23,11 +23,11 @@
             </el-dropdown-menu>
           </el-dropdown>
         </header>
-        <!-- <transition :name="transitionName"> -->
+        <transition name="fade">
           <keep-alive>
-            <router-view class="_flex-item app-content" transition='fade'  />
+            <router-view class="_flex-item app-content" />
           </keep-alive>
-        <!-- </transition> -->
+        </transition>
         <footer class="app-footer _center" v-show='!$route.meta.hideMainFooter'>版权所有</footer>
       </el-col>
     </el-row>
@@ -44,18 +44,18 @@ export default {
   data() {
     return {
       isCollapse: true,
-      transitionName: 'slide-left'
+      transitionName: "slide-left"
     };
   },
   watch: {
-　　'$route' (to, from) {
-　　//    console.log('现在路由:',to.path.split('/')[1],'来自路由:',from.path.split('/')[1],'现在的动画:',this.transitionName)
-　　　　const toDepth = to.path.split('/').length
-　　　　const fromDepth = from.path.split('/').length
-　　　　this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-　　　　}
-　　}
-}
+    $route(to, from) {
+      //    console.log('现在路由:',to.path.split('/')[1],'来自路由:',from.path.split('/')[1],'现在的动画:',this.transitionName)
+      const toDepth = to.path.split("/").length;
+      const fromDepth = from.path.split("/").length;
+      this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
+    }
+  }
+};
 </script>
 
 <style lang='scss'>
@@ -87,26 +87,27 @@ export default {
         height: 50px;
         background-color: #545455;
         border-bottom: 1px solid #e5e5e5;
-        .header-collapse{
+        .header-collapse {
           background-color: #444;
           padding: 8px;
         }
-        .el-dropdown-link{
+        .el-dropdown-link {
           padding: 10px;
-          &:hover{
+          &:hover {
             cursor: pointer;
           }
-          svg{
+          svg {
             font-size: 30px;
           }
         }
-        svg{
+        svg {
           font-size: 24px;
           color: #ccc;
         }
       }
       .app-content {
-        transition: all .05s ease-in-out;
+        overflow: auto;
+        transition: all 0.05s ease-in-out;
       }
       .app-footer {
         height: 40px;
@@ -116,5 +117,8 @@ export default {
       }
     }
   }
+}
+.fade-enter,.fade-leave-active{
+  transform: translateX(100%)
 }
 </style>

@@ -8,9 +8,21 @@
 ._center {
   text-align: center;
 }
+
+// icon默认的样式
 .icon {
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+}
+
+// 自定义饿了么加载圈的颜色
+.el-loading-mask {
+  background-color: rgba(0, 0, 0, 0.7);
+  .el-loading-spinner {
+      .path {
+          stroke: #06de1e;
+      }
+  }
 }

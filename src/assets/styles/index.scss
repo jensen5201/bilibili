@@ -4,6 +4,7 @@
 * @Last Modified by:   jensen
 * @Last Modified time: 2018-04-05 16:32:23
 */
-@import './reset';
+// @import './reset';  //选用normalize作为基础样式  原因google
 @import './flex';
-@import './common';
+@import './global';
+@import './normalize';

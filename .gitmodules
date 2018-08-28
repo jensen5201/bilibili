@@ -1,0 +1,3 @@
+[submodule "publish"]
+	path = publish
+	url = git@github.com:jensen5201/bilibili-release.git

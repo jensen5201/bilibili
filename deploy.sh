@@ -31,6 +31,12 @@ commit_msg="[release]$1"
 info "The tag: ${tag}"
 info "And the current commit message: ${commit_msg}"
 
+# 检测是否存在子仓库目录
+if [ ! -d 'publish' ]; then
+  error "Tips: use git submodule init && git submodule update to create publish "
+  exit 2
+fi
+
 # 进入子模块拉取最新
 cd publish
 git checkout master
@@ -42,6 +48,7 @@ cd ..
 if [ ! -d ${target_folder} ]; then
   mkdir ${target_folder}
 else
+  exit 2
   rm -rfv ${target_folder}/*
 fi
 
@@ -64,4 +71,4 @@ git push
 git push --tags
 
 # 完成提示
-success 'Deploy completed, \~QwQ~/'
+success 'Deploy completed!

@@ -2,7 +2,7 @@
 
 # 注意新建的shell文件执行前需要添加执行权限  即：chmod +x <文件名>
 
-# 封装公用方法
+# 定义公用方法
 function success(){
   echo -e "\033[1;32m(=ﾟωﾟ)ﾉ $1\033[0m"
 }
@@ -15,27 +15,30 @@ function error(){
   echo -e "\033[1;31m(╯°□°）╯︵ ┻━┻ $1\033[0m"
 }
 
-# 检测是否传参，否则抛错
-if [ "$#" -ne "2" ]; then
-  error "Usage: $0 <tag> <commit_msg>"
-  exit 2
-fi
-
 # 定义变量
+publish_folder='publish'
 target_folder='publish/target'
 dist_folder='dist'
 tag="v$1"
 commit_msg="[release]$1"
 
+# 检测是否传参，否则抛错
+if [ "$#" -ne "2" ]; then
+  error "Usage: $0 <tag> <commit_msg>"
+  exit 2
+# 检测是否存在版本压缩包源
+elif [ ! -d ${dist_folder} ]; then
+  error "Tips: use yarn build to create dist folder"
+  exit 2
+# 检测是否存在子仓库目录
+elif [ ! -d ${publish_folder} ]; then
+  error "Tips: use git submodule init && git submodule update to create publish folder"
+  exit 2
+fi
+
 # 开始提示
 info "The tag: ${tag}"
 info "And the current commit message: ${commit_msg}"
-
-# 检测是否存在子仓库目录
-if [ ! -d 'publish' ]; then
-  error "Tips: use git submodule init && git submodule update to create publish "
-  exit 2
-fi
 
 # 进入子模块拉取最新
 cd publish

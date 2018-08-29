@@ -42,7 +42,6 @@ cd ..
 if [ ! -d ${target_folder} ]; then
   mkdir ${target_folder}
 else
-  exit 2
   rm -rfv ${target_folder}/*
 fi
 

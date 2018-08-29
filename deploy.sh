@@ -28,8 +28,8 @@ tag="v$1"
 commit_msg="[release]$1"
 
 # 开始提示
-info "And the tag : ${tag}"
-info "Current commit message : ${commit_msg}"
+info "The tag: ${tag}"
+info "And the current commit message: ${commit_msg}"
 
 # 进入子模块拉取最新
 cd publish
@@ -37,14 +37,13 @@ git checkout master
 git pull
 
 
-# 切换到父模块，判断是否存在子模块目录，没有则创建，有则清空目录下的文件便于copy最新的进来
+# 切换到父模块，判断是否目标是否为目录，不是目录则创建目录，有则清空目录下的文件便于copy最新的进来
 cd ..
 if [ ! -d ${target_folder} ]; then
   mkdir ${target_folder}
 else
-  echo ${target_folder}
   exit 2
-  # rm -rfv ${target_folder}/*
+  rm -rfv ${target_folder}/*
 fi
 
 # 复制最新打包的文件到子仓库

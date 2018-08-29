@@ -38,7 +38,7 @@ fi
 
 # 开始提示
 info "The tag: ${tag}"
-info "And the current commit message: ${commit_msg}"
+info "The commit message: ${commit_msg}"
 
 # 进入子模块拉取最新
 cd publish
@@ -58,7 +58,8 @@ fi
 # 复制最新打包的文件到子仓库
 cp -rv ${dist_folder}/* ${target_folder}
 
-# 子仓库获取新打包文件后，进行提交、打tag并推送远到端仓库
+# 切换到子仓库获取新打包文件后，进行提交、打tag并推送远到端仓库
+cd publish
 git add .
 git commit . -m "${commit_msg}"
 git tag -a "${tag}" -m "${commit_msg}"

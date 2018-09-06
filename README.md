@@ -1,6 +1,6 @@
 # bilibili
 
-> bilibili基于轻量级MVVM框架Vue进行开发，目的在于积累迭代构建一个完整的vue生态架构，---that is，不断完善抽调优化
+> AAAAbilibili基于轻量级MVVM框架Vue进行开发，目的在于积累迭代构建一个完整的vue生态架构，---that is，不断完善抽调优化
 
 ## Server
 

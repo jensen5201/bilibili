@@ -18,7 +18,7 @@
         <el-button type='primary' @click.stop='login'> 登 录 </el-button>
       </section>
       <section class='_form-forget'>
-        <router-link to='/register' tag='span'> 快速注册abc </router-link>
+        <router-link to='/register' tag='span'> 快速注册123c </router-link>
         <router-link to='/forgetPsw' tag='span'> 忘记密码？</router-link>
       </section>
     </div>

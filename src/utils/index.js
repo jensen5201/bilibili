@@ -10,7 +10,7 @@
 
 import Vue from 'vue'
 import global from  './global'
-import Cookie from  './Cookie.js'
+import Cookie from  './mycookie.js'
 
 Vue.use(new global())
 window.Cookie = Cookie
